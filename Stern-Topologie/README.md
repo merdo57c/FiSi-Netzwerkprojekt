@@ -46,10 +46,35 @@ Nach dem Wiederverbinden: 4 von 4 Paketen empfangen (0 % Verlust).
 
 ![](../Screenshots/03-stern_ping-pc0-auf-pc1-ausfall-und-danach.png)
 
+## Switch-Ausfall-Test (CLI)
+
+Ziel: Prüfen, was passiert, wenn der Switch seine Ports deaktiviert.
+
+Vorgehen:
+1. CLI von Switch0 öffnen.
+2. Befehle eingeben:
+   - `enable`
+   - `configure terminal`
+   - `interface range fastEthernet0/1-24`
+   - `shutdown`
+   - `end`
+3. Die Konsole bestätigt: Alle Ports wurden mit „administratively down“ deaktiviert.
+   Die Meldung „Line protocol … changed state to down“ zeigt, dass die Verbindungen unterbrochen sind.
+
+   ![](../Screenshots/07-stern_ausfall-switch-verbindungen-getrennt.png)
+
+Wiederherstellung (teilweise):
+- Mit `interface range fastEthernet0/1-3` und `no shutdown` wurden nur die Ports 0/1 bis 0/3 wieder aktiviert.
+- Die Ports 0/4 bis 0/24 sind weiterhin deaktiviert.
+
+![](../Screenshots/06-stern_ausfall-switch-ports-1-3-wieder-aktiv.png) 
+
+Beobachtung: Der Switch meldet jede Zustandsänderung einzeln an der Konsole. Diese Meldungen sind hilfreich, um einen Ausfall im Netz schnell zu erkennen.
+
 ## Fehleranalyse
 
-Noch nicht vollständig. Der Ausfall-Test zeigt, dass nur das getrennte Gerät betroffen ist.
+### Teilweise Wiederherstellung (geplant)
 
-## Meine Lernerkenntnisse
+Um zu prüfen, ob sich einzelne Ports gezielt wieder aktivieren lassen, wurden nur die Ports FastEthernet0/1 bis 0/3 mit `no shutdown` reaktiviert. Die Ports FastEthernet0/4 bis 0/24 blieben bewusst deaktiviert.
 
-_Hier deine eigenen Erkenntnisse ergänzen._
+Beobachtung: Die Konsole bestätigt für 0/1 bis 0/3 den Zustand „up“. Die übrigen Ports bleiben „administratively down“.
