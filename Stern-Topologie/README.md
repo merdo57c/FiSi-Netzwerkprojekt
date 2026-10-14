@@ -1,4 +1,5 @@
 # Stern-Topologie
+![](../Screenshots/01-stern_aufbau.png)
 
 ## Aufbau
 
@@ -36,10 +37,14 @@ Diese Topologie wird direkt mit Packet Tracer nachgebildet, es ist also keine Er
 
 ## Ausfall-Test
 
+![](../Screenshots/02-stern_ausfall-pc1-kabel-getrennt.png)
+
 Das Kabel zu PC1 wurde getrennt.
 Ping von PC0 an PC1 im ersten Lauf: 3 × „Request timed out“, danach 1 Antwort, sobald das Kabel wieder verbunden war.
 Ergebnis: 1 von 4 Paketen empfangen (75 % Verlust).
 Nach dem Wiederverbinden: 4 von 4 Paketen empfangen (0 % Verlust).
+
+![](../Screenshots/03-stern_ping-pc0-auf-pc1-ausfall-und-danach.png)
 
 ## Fehleranalyse
 
