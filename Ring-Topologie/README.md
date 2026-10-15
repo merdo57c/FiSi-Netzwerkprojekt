@@ -1,5 +1,7 @@
 # Ring-Topologie
 
+![](../Screenshots/02-ring_aufbau-alle-verbindungen-stp-port-switch3.png)
+
 ## Status
 
 In Arbeit: Theorie und Planung abgeschlossen, Aufbau noch offen.
@@ -32,6 +34,23 @@ Physisch ist das ein Ring. Da die Switches eine Schleife bilden, blockiert das S
 | PC1   | 192.168.30.2 | 255.255.255.0 |
 | PC2   | 192.168.30.3 | 255.255.255.0 |
 | PC3   | 192.168.30.4 | 255.255.255.0 |
+
+## Spanning Tree: blockierter Port
+
+Da die Switches einen geschlossenen Ring bilden, würde ohne Schutz eine Schleife entstehen. Das Spanning Tree Protocol (STP) blockiert deshalb einen Port.
+
+Ausgabe von `show spanning-tree` auf [Switch-Name]:
+
+| Interface | Rolle | Status | Bedeutung                         |
+|-----------|-------|--------|-----------------------------------|
+| Fa0/1     | Root  | FWD    | Weg zur Root-Bridge, aktiv        |
+| Fa0/2     | Altn  | BLK    | Alternative, blockiert            |
+| Fa0/3     | Desg  | FWD    | Anschluss zum PC, aktiv           |
+
+Beobachtung: Der Port Fa0/2 ist blockiert, der Port Fa0/1 ist der Root-Port. Im Netz ist dadurch kein Pfad doppelt aktiv.
+
+![show spanning-tree](../Screenshots/01-ring_show-spanning-tree_blockierter-port.png)
+
 
 ## Tests
 
