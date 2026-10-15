@@ -19,7 +19,7 @@ Am Ende soll ein fiktives Firmennetzwerk mit mehreren Abteilungen und zwei Stand
 | Punkt-zu-Punkt | Zwei Geräte sind direkt miteinander verbunden. Einfach, aber jede weitere Verbindung braucht eine eigene Leitung. | [Zum Ordner](Punkt-zu-Punkt-Topologie/) |
 | Bus | Alle Geräte hängen an einer gemeinsamen Leitung. Wenig Kabel, aber ein Ausfall der Leitung betrifft das ganze Netz. | [Zum Ordner](Bus-Topologie/) |
 | Stern | Alle Geräte sind mit einem zentralen Verteiler verbunden. Fällt ein Endgerät aus, bleibt der Rest erreichbar. Fällt der Verteiler aus, steht das Netz. | [Zum Ordner](Stern-Topologie/) |
-| Ring | Die Geräte bilden einen geschlossenen Kreis, über den die Daten weitergereicht werden. Eine unterbrochene Strecke kann den Ring stören. | folgt |
+| Ring | Die Geräte bilden einen geschlossenen Kreis, über den die Daten weitergereicht werden. Eine unterbrochene Strecke kann den Ring stören. | [Zum Ordner](Ring-Topologie/) |
 | Baum | Mehrere Sterne sind hierarchisch verbunden, ähnlich einem Stammbaum. Gut erweiterbar, aber bei einem Ausfall im oberen Bereich sind viele Geräte betroffen. | folgt |
 | Mesh | Geräte sind mehrfach untereinander verbunden. Vollständig vermascht bedeutet jeder mit jedem, teilweise vermascht nur einige Verbindungen. Hohe Ausfallsicherheit, aber viel Kabel. | folgt |
 | Hybrid | Eine Kombination mehrerer Topologien, zum Beispiel Stern und Ring, um deren Vorteile zu verbinden. | folgt |
