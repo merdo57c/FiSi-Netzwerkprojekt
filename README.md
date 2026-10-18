@@ -21,7 +21,7 @@ Am Ende soll ein fiktives Firmennetzwerk mit mehreren Abteilungen und zwei Stand
 | Stern | Alle Geräte sind mit einem zentralen Verteiler verbunden. Fällt ein Endgerät aus, bleibt der Rest erreichbar. Fällt der Verteiler aus, steht das Netz. | [Zum Ordner](Stern-Topologie/) |
 | Ring | Die Geräte bilden einen geschlossenen Kreis, über den die Daten weitergereicht werden. Eine unterbrochene Strecke kann den Ring stören. | [Zum Ordner](Ring-Topologie/) |
 | Baum | Mehrere Sterne sind hierarchisch verbunden, ähnlich einem Stammbaum. Gut erweiterbar, aber bei einem Ausfall im oberen Bereich sind viele Geräte betroffen. | folgt |
-| Mesh | Geräte sind mehrfach untereinander verbunden. Vollständig vermascht bedeutet jeder mit jedem, teilweise vermascht nur einige Verbindungen. Hohe Ausfallsicherheit, aber viel Kabel. | folgt |
+| Mesh | Geräte sind mehrfach untereinander verbunden. Vollständig vermascht bedeutet jeder mit jedem, teilweise vermascht nur einige Verbindungen. Hohe Ausfallsicherheit, aber viel Kabel. | [Zum Ordner](Mesh-Topologie/) |
 | Hybrid | Eine Kombination mehrerer Topologien, zum Beispiel Stern und Ring, um deren Vorteile zu verbinden. | folgt |
 | Punkt-zu-Mehrpunkt | Ein zentrales Gerät verbindet sich mit mehreren Teilnehmern, zum Beispiel ein Access Point mit WLAN-Geräten. | folgt |
 | Firmennetzwerk | Ein fiktives Unternehmen mit mehreren Abteilungen und zwei Standorten, das die einzelnen Topologien kombiniert. | folgt |
