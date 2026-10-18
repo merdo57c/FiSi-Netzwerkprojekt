@@ -19,6 +19,11 @@ Ein Ring aus PCs ist in Packet Tracer nicht sauber umsetzbar, weil PCs nur einen
 
 Physisch ist das ein Ring. Da die Switches eine Schleife bilden, blockiert das Spanning Tree Protocol (STP) einen Port, um eine Endlosschleife zu verhindern. Logisch wirkt das Netz dann wie eine Kette.
 
+- Physisch entsteht ein geschlossener Ring aus Switches.
+- Logisch blockiert das Spanning Tree Protocol eine Verbindung, damit keine Schleife entsteht. Das Netz verhält sich dadurch wie eine Kette.
+- Bei einem Kabelausfall wird die blockierte Verbindung aktiv, und die Daten laufen über den anderen Weg.
+- Bei einem Switch-Ausfall ist nur der dort angeschlossene PC vom Netz getrennt.
+
 ## Geräte
 
 - 4 × Switch 2960-24TT (Switch0 bis Switch3)
