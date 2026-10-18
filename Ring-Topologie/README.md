@@ -2,10 +2,6 @@
 
 ![](../Screenshots/02-ring_aufbau-alle-verbindungen-stp-port-switch3.png)
 
-## Status
-
-In Arbeit: Theorie und Planung abgeschlossen, Aufbau noch offen.
-
 ## Theorie
 
 Bei der Ring-Topologie ist jedes Gerät mit genau zwei Nachbarn verbunden. Zusammen bilden sie einen geschlossenen Kreis. Daten werden von Gerät zu Gerät weitergereicht, bis sie beim Empfänger ankommen. Jedes Gerät prüft die Zieladresse und gibt das Paket an den nächsten Nachbarn weiter, wenn es nicht für es bestimmt ist.
